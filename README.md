@@ -9,6 +9,7 @@ The software can recognize individual or multiple keys on the keyboard accuratel
 * some wire
 * solder station
 * micro usb cable and adapter for keyboard enclosure
+* some screws for fixing the arduino
 # How-To
 1. Open the keyboard case
 2. remove the driver board
