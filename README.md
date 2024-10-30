@@ -2,7 +2,7 @@
 A simple midi out interface for yamaha psr e360 b keyboard to use with music learning software on a tablet or pc (e.g. 'simply piano'). 
 The software can recognize individual or multiple keys on the keyboard accurately and without delay
 # Restrictions:
-* no support for touch dynamics (simply on or off)
+* no support for touch dynamics (just on or off)
 * no support midi in
 # Requirements
 * Arduino Leonardo (recommended) or any other arduino/esp32 dev board with native usb on board
