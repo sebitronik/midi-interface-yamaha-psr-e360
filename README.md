@@ -2,7 +2,7 @@
 A simple midi out interface for yamaha psr e360 keyboard to use with music learning software on a tablet or pc (e.g. 'simply piano'). 
 The software can recognize individual or multiple keys on the keyboard accurately and without delay
 # Restrictions:
-* no support for touch dynamics (just on or off)
+* no support for touch dynamics (just key is pressed or or not pressed)
 * no support midi in
 # Requirements
 * Yamaha PSR E360 Keyboard
