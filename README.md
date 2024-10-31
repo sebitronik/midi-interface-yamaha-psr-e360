@@ -27,4 +27,5 @@ The software can recognize individual or multiple keys on the keyboard
 6. Download the Skretch from release directory and upload it to arduino leonardo with the arduino ide
 7. Connect your PC with an USB Cable and test your midi interface on PC with the free Software e.g. VMPK [(https://vmpk.sourceforge.io)]
 8. Install the usb adapter on the keyboard case for the outside world ![usb_adapter](https://github.com/user-attachments/assets/a71c92b3-18c8-4a13-b470-ad198eb77fa7)
-9. Congratulation! You are ready to play!
+9. Attach the arduino on case with some screws, glue or board holder clips
+10. Congratulation! You are ready to play!
