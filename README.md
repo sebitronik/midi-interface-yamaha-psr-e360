@@ -1,6 +1,8 @@
 # Usb Midi Interface for Yamaha PSR E360
+![title](https://github.com/user-attachments/assets/5e19b155-ed9c-4c62-a946-06533dfe7f22)
 A simple midi interface for yamaha psr e360 keyboard to use with music learning software on a tablet or pc (e.g. 'simply piano'). 
-The software can recognize individual or multiple keys on the keyboard accurately and without delay
+The software can recognize individual or multiple keys on the keyboard
+ accurately and without delay
 # Restrictions:
 * No support for touch dynamics (just key is pressed or or not pressed)
 * Midi in is not supported only midi out
