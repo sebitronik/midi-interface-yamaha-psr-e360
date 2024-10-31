@@ -15,7 +15,7 @@ The software can recognize individual or multiple keys on the keyboard accuratel
 
 # How-To
 1. Open the keyboard case (be aware you may lose your warranty)
-2. Remove the cables from driver board
+2. Carefully removing the black cables from driver board
 3. Remove driver board
 4. Solder wires on the backside of the driverboard to the Arduino
 5. Wiring according the picture ![20220509_124445_verdrahtung_direkt](https://github.com/user-attachments/assets/9adffc1d-a2fc-4815-8e37-f4350df06015)
