@@ -6,7 +6,7 @@ The software can recognize individual or multiple keys on the keyboard accuratel
 * Midi in is not supported
 # Requirements
 * Yamaha PSR E360 Keyboard
-* Arduino Leonardo (recommended) or any other Arduino/ESP32 dev board with native (!) USB on board
+* Arduino Leonardo (recommended) or any other Arduino/ESP32 dev board with native USB HID functionality with 18 Digital Inputs
 * Some wire
 * Solder station
 * Microscope (recommended)
