@@ -24,8 +24,10 @@ The software can recognize individual or multiple keys on the keyboard
 3. Unscrew the screws and remove the mainboard
 4. Now the more difficult part: You can solder the cables from backside of the board directly to an pin header on the GPIOs of the arduino or (like the picture) put on the right side of the Board an 19 PIN Header with some glue and solder the cables to that header step by step (From there you will need Jumper Wires to the Arduino Ports). The following picture shows you where you have solder the wires on the Board an in white the target GPIO Pin of the Arduino. Which way you prefer is your choice. ![20220509_124445_verdrahtung_direkt](https://github.com/user-attachments/assets/9adffc1d-a2fc-4815-8e37-f4350df06015) Here you can see the result with jumper wires (but as mentioned before this is optional) ![jumper_wires](https://github.com/user-attachments/assets/0a221dd5-db40-4e67-966b-9aded31f5ab2)
 5. Carefully reinsert the black cables from before 
-6. Download the Skretch from release directory and upload it to arduino leonardo with the arduino ide
-7. Connect your PC with an USB Cable and test your midi interface on PC with the free Software e.g. VMPK [(https://vmpk.sourceforge.io)]
-8. Install the usb adapter on the keyboard case for the outside world ![usb_adapter](https://github.com/user-attachments/assets/a71c92b3-18c8-4a13-b470-ad198eb77fa7)
-9. Attach the arduino on case with some screws, glue or board holder clips
-10. Congratulation! You are ready to play!
+6. Download the Skretch from release directory and start the arduino ide
+7. Connect the Arduino with USB Cable to PC
+8. Install the library "MIDIUSB" from library manager in Arduino IDE and upload the skretch to Arduino 
+9. Download VMPK [(https://vmpk.sourceforge.io)] and set Midi Interface to Arduino Leonardo and test your inputs
+10. Install the usb adapter on the keyboard case for the outside world ![usb_adapter](https://github.com/user-attachments/assets/a71c92b3-18c8-4a13-b470-ad198eb77fa7)
+11. Attach the arduino on case with some screws, glue or board holder clips
+12. Congratulation! You are ready to play!
