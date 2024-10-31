@@ -1,4 +1,4 @@
-# A midi interface for yamaha psr e360
+# usb midi interface for yamaha psr e360
 A simple midi out interface for yamaha psr e360 b keyboard to use with music learning software on a tablet or pc (e.g. 'simply piano'). 
 The software can recognize individual or multiple keys on the keyboard accurately and without delay
 # Restrictions:
