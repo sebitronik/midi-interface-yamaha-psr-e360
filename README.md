@@ -27,7 +27,7 @@ The software can recognize individual or multiple keys on the keyboard
 6. Download the Skretch from release directory and start the arduino ide
 7. Connect the Arduino with USB Cable to PC
 8. Install the library "MIDIUSB" from library manager in Arduino IDE and upload the skretch to Arduino 
-9. Download VMPK [(https://vmpk.sourceforge.io)] and set Midi Interface to Arduino Leonardo and test your inputs
+9. Download VMPK https://vmpk.sourceforge.io and set Midi Interface to Arduino Leonardo and test your inputs
 10. Install the usb adapter on the keyboard case for the outside world ![usb_adapter](https://github.com/user-attachments/assets/a71c92b3-18c8-4a13-b470-ad198eb77fa7)
 11. Attach the arduino on case with some screws, glue or board holder clips
 12. Congratulation! You are ready to play!
