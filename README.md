@@ -18,7 +18,7 @@ The software can recognize individual or multiple keys on the keyboard
 * Midi in is not supported only midi out
 
 # How-To
-1. Open the keyboard case (be aware you may lose your warranty)
+1. Open the keyboard case (Note that you will lose the remaining warranty) ![screws](https://github.com/user-attachments/assets/bbcd0ccd-3c16-4224-841f-c1229925b69e)
 2. Carefully removing the black cables from driver board
 3. Remove driver board
 4. Solder wires on the backside of the driverboard to the Arduino
