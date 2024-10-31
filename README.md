@@ -3,7 +3,7 @@ A simple midi interface for yamaha psr e360 keyboard to use with music learning 
 The software can recognize individual or multiple keys on the keyboard accurately and without delay
 # Restrictions:
 * No support for touch dynamics (just key is pressed or or not pressed)
-* Midi in is not yet supported only midi out
+* Midi in is not supported only midi out
 # Requirements
 * Yamaha PSR E360 Keyboard
 * Arduino Leonardo (recommended) or any other Arduino/ESP32 dev board with native USB HID functionality with 18 Digital Inputs
