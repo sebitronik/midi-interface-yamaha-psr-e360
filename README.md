@@ -14,9 +14,11 @@ The software can recognize individual or multiple keys on the keyboard accuratel
 * Some screws for fixing the Arduino
 
 # How-To
-1. Open the keyboard case
-2. Remove the driver board
-3. Wiring according the picture ![20220509_124445_verdrahtung_direkt](https://github.com/user-attachments/assets/9adffc1d-a2fc-4815-8e37-f4350df06015)
-4. Upload the skretch zu arduino leonardo with the arduino ide
-5. Install the usb adapter on the keyboard case
-6. Test your input with the software VMPK
+1. Open the keyboard case (be aware you may lose your warranty)
+2. Remove the cables from driver board
+3. Remove driver board
+4. Solder wires on the backside of the driverboard to the Arduino
+5. Wiring according the picture ![20220509_124445_verdrahtung_direkt](https://github.com/user-attachments/assets/9adffc1d-a2fc-4815-8e37-f4350df06015)
+6. Upload the skretch zu arduino leonardo with the arduino ide
+7. Install the usb adapter on the keyboard case
+8. Test your input with the software VMPK
