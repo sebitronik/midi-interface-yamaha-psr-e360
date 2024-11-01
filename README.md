@@ -4,7 +4,7 @@ A simple MIDI interface for the Yamaha PSR E360 keyboard, designed for use with 
 
 # Requirements
 * Yamaha PSR E360 Keyboard
-* Arduino Leonardo (recommended) or any other Arduino/ESP32 dev board with native USB HID functionality and 18 digital inputs
+* Arduino Leonardo (recommended) or any other Arduino/ESP32 dev board with native USB HID functionality and 18 digital inputs (in that case make sure you are always using the same input pins)
 * Some very thin wrapping wire (AWG30), breadboard jumper wires, pin header
 * Soldering stuff
 * Screwdriver
