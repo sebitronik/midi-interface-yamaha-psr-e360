@@ -5,7 +5,7 @@ A simple MIDI interface for the Yamaha PSR E360 keyboard, designed for use with 
 # Requirements
 * Yamaha PSR E360 Keyboard
 * Arduino Leonardo (recommended) or any other Arduino/ESP32 dev board with native USB HID functionality and 18 digital inputs
-* Some wires (recommended wrapping wire AWG30), breadboard jumper wires, pin header
+* Some very thin wrapping wire (AWG30), breadboard jumper wires, pin header
 * Soldering stuff
 * Screwdriver
 * Microscope (optional)
@@ -16,7 +16,7 @@ A simple MIDI interface for the Yamaha PSR E360 keyboard, designed for use with 
 * No support for touch sensitivity (only whether a key is pressed or not)
 * MIDI-In is not supported, only MIDI-Out
 
-# How-To
+# Instruction
 Step 1:
 Disconnect the power supply or batteries and open the keyboard case (note that this will void any remaining warranty). ![screws](https://github.com/user-attachments/assets/bbcd0ccd-3c16-4224-841f-c1229925b69e)
 
@@ -47,3 +47,15 @@ Attach the Arduino to the case using screws, glue, or board holder clips, and re
 
 Step 10: 
 Congrats! You are ready to play!
+
+# Technical Background
+
+Disturbance on Row lines:
+
+The keyboard sends a keystroke signal in rows and columns to the mainboard. This signal is then forwarded to the Arduino, where it determines which key has been pressed. Additionally, the keyboard has an extra switch for each key that is only triggered when the key is pressed further down. This information is used to enable velocity sensitivity (though this information is currently not utilized). Essentially, a simple query is made to forward the information via the MIDI protocol over USB. Unfortunately, there is interference on the signals for the rows that must be filtered out because otherwise, the Arduino cannot clearly identify the key.![filter](https://github.com/user-attachments/assets/b8193c9d-9c64-4618-af3e-b698cff7a78c) Sometimes the yellow row signal has two impulses.
+
+Fast polling of the GPIO Inputs:
+
+To read the state of the Arduino inputs, it was found that using digitalRead() is too slow, with a delay of 4 ms. Therefore, direct register access is essential to efficiently determine the state. This method allows for a much faster read and is better suited for sampling a 2 kHz signal.
+
+
