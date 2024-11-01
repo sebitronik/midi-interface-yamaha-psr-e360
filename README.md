@@ -38,12 +38,12 @@ Install a USB adapter on the keyboard case for external connection by drilling a
 
 # Technical background information
 
-## Disturbance on Row lines:
+## Disturbance on Row lines
 
 The Yamaha keyboard sends a keystroke signal in rows and columns to the mainboard. This signal is then forwarded to the Arduino, where it determines which key has been pressed. Additionally, the keyboard has an extra switch for each key that is only triggered when the key is pressed further down. This information is used to enable velocity sensitivity (though this information is currently not utilized). Essentially, a simple query is made to forward the information via the MIDI protocol over USB. Unfortunately, there is interference on the signals for the rows that must be filtered out because otherwise, the Arduino cannot clearly identify the key:![filter](https://github.com/user-attachments/assets/7516936b-1a3a-4605-a4fe-ddfbf5e1219d)
 
 Sometimes the yellow row signal has two impulses.
 
-## Fast polling of the GPIO Inputs:
+## Fast polling of the GPIO Inputs
 
 To read the state of the Arduino inputs, it was clear that using digitalRead() function is too slow, with a delay of some milliseconds. Therefore, direct register access is essential (e.g. `PIND & B00000100`) to efficiently determine the state. This method is much faster and better suited for sampling a 2 kHz signal now with a delay of some nanoseconds.
