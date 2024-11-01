@@ -43,9 +43,9 @@ Install a USB adapter on the keyboard case for external connection by drilling a
 
 The Yamaha keyboard sends a keystroke signal in rows and columns to the mainboard. This signal is then forwarded to the Arduino, where it determines which key has been pressed. Additionally, the keyboard has an extra switch for each key that is only triggered when the key is pressed further down. This information is used to enable velocity sensitivity (though this information is currently not utilized). Essentially, a simple query is made to forward the information via the MIDI protocol over USB. Unfortunately, there is a periodical interference signals for the column that must be filtered out because otherwise, the Arduino cannot clearly identify the key:
 ![SDS00011](https://github.com/user-attachments/assets/c70dfc6b-89a7-4fca-be66-c9a8bfde7893)
-If we look closer:
+
+We see some peaks on the magenta signal. If we look now closer there are sometimes two impulses which we dont need (therefore the filter is necessary in the code)
 ![SDS00005](https://github.com/user-attachments/assets/741ad2ed-5dd2-4b7f-a02f-b5df548f7685)
-So there are sometimes two impulses which we dont need.
 
 ## Fast polling of the GPIO Inputs
 
