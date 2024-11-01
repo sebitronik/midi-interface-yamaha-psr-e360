@@ -16,7 +16,7 @@ A simple MIDI interface for the Yamaha PSR E360 keyboard, designed for use with 
 * No support for touch sensitivity (only whether a key is pressed or not)
 * MIDI-In is not supported, only MIDI-Out
 
-# Instruction
+# Instructions
 ## Step 1: Preparations
 Disconnect the power supply or batteries and open the keyboard case (note that this will void any remaining warranty). ![screws](https://github.com/user-attachments/assets/bbcd0ccd-3c16-4224-841f-c1229925b69e)
 
