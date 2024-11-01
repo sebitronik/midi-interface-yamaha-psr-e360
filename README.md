@@ -31,7 +31,7 @@ Now carefully reinsert the black cables from before on the mainboard.
 ## Step 4: Programming 
 1. Download the sketch from the release directory and start the Arduino IDE.
 2. Connect the Arduino to the PC via USB cable, install the "MIDIUSB" library from the library manager in Arduino IDE, and upload the sketch to the Arduino.
-3. Download VMPK https://vmpk.sourceforge.io, set the MIDI Interface to Arduino Leonardo, and test your inputs. You should see and hear your keyboard inputs from PC. Note: If you are pressing one key you will instantly see it on the monitor but the sound on PC need some time to produce (its only a lag in sound output not in the interface). Therefore it is always better to mute the speakers on your monitor or tablet and hear the sound directly from the keyboard.
+3. Download VMPK https://vmpk.sourceforge.io, set the MIDI Interface to Arduino Leonardo, and test your inputs. Now you should see and hear your keyboard inputs on the computer. Note: If you are pressing one key you will instantly see it on the monitor but the sound on PC need some time to produce (its only a lag in sound output not in the interface). Therefore it is always better to mute the speakers on your monitor or tablet and hear the sound directly from the keyboard.
 
 ## Step 5: Final actions
 Install a USB adapter on the keyboard case for external connection by drilling a hole in the case.  ![usb_adapter](https://github.com/user-attachments/assets/a71c92b3-18c8-4a13-b470-ad198eb77fa7) Now attach the Arduino to the case using screws, glue, or board holder clips, and reassemble the case. Congrats! You are ready to play!
