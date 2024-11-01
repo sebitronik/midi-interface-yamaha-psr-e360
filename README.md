@@ -4,7 +4,7 @@ A simple MIDI interface for the Yamaha PSR E360 keyboard, designed for use with 
 
 # Requirements
 * Yamaha PSR E360 Keyboard
-* Arduino Leonardo (recommended) or any other Arduino/ESP32 dev board with native USB HID functionality and 18 digital inputs (in that case make sure you are always using the same input pins)
+* Arduino Leonardo compatible (recommended) or any other Arduino/ESP32 dev board with native USB HID functionality and 18 digital inputs (in that case make sure you are always using the same input pins)
 * Some very thin wrapping wire (AWG30), breadboard jumper wires, pin header
 * Soldering stuff
 * Screwdriver
@@ -25,7 +25,7 @@ Carefully remove the black cables by opening the white socket. It’s important 
 
 ## Step 3: Soldering
 Now for the tricky part: You can solder the wires from the backside of the board directly to the GPIO pins on the Arduino, or (like I did) attach a 19-pin header on the right side with some glue and solder the wires step-by-step under the microscope. Fortunately, ports D11–D7 of the pin header can be soldered directly to the board. Don't forget the ground pin! ![connection_to_arduino](https://github.com/user-attachments/assets/76da28b1-f90a-4575-976f-b60961070ddb)
-Here’s the result with jumper wires wrapped with some tape. ![jumper_wires](https://github.com/user-attachments/assets/0a221dd5-db40-4e67-966b-9aded31f5ab2)
+Here’s the result with jumper wires wrapped with some tape. ![20241101_175825](https://github.com/user-attachments/assets/99f6066c-b6df-4b57-8dee-ceb42ed1c81c)
 Now carefully reinsert the black cables from before on the mainboard.
 
 ## Step 4: Programming 
@@ -35,14 +35,17 @@ Now carefully reinsert the black cables from before on the mainboard.
 
 ## Step 5: Final actions
 Install a USB adapter on the keyboard case for external connection by drilling a hole in the case.  ![usb_adapter](https://github.com/user-attachments/assets/a71c92b3-18c8-4a13-b470-ad198eb77fa7) Now attach the Arduino to the case using screws, glue, or board holder clips, and reassemble the case. Congrats! You are ready to play!
+![20241101_173311](https://github.com/user-attachments/assets/759cb362-0797-477e-993d-36c0537a5a3b)
 
 # Technical background information
 
 ## Disturbance on Row lines
 
-The Yamaha keyboard sends a keystroke signal in rows and columns to the mainboard. This signal is then forwarded to the Arduino, where it determines which key has been pressed. Additionally, the keyboard has an extra switch for each key that is only triggered when the key is pressed further down. This information is used to enable velocity sensitivity (though this information is currently not utilized). Essentially, a simple query is made to forward the information via the MIDI protocol over USB. Unfortunately, there is interference on the signals for the rows that must be filtered out because otherwise, the Arduino cannot clearly identify the key:![filter](https://github.com/user-attachments/assets/7516936b-1a3a-4605-a4fe-ddfbf5e1219d)
-
-Sometimes the yellow row signal has two impulses.
+The Yamaha keyboard sends a keystroke signal in rows and columns to the mainboard. This signal is then forwarded to the Arduino, where it determines which key has been pressed. Additionally, the keyboard has an extra switch for each key that is only triggered when the key is pressed further down. This information is used to enable velocity sensitivity (though this information is currently not utilized). Essentially, a simple query is made to forward the information via the MIDI protocol over USB. Unfortunately, there is a periodical interference signals for the rows that must be filtered out because otherwise, the Arduino cannot clearly identify the key:
+![SDS00011](https://github.com/user-attachments/assets/c70dfc6b-89a7-4fca-be66-c9a8bfde7893)
+If we look closer:
+![SDS00005](https://github.com/user-attachments/assets/741ad2ed-5dd2-4b7f-a02f-b5df548f7685)
+So there are sometimes two impulses which we dont need.
 
 ## Fast polling of the GPIO Inputs
 
