@@ -7,10 +7,10 @@ The software can recognize individual or multiple keys on the keyboard
 # Requirements
 * Yamaha PSR E360 Keyboard
 * Arduino Leonardo (recommended) or any other Arduino/ESP32 dev board with native USB HID functionality with 18 Digital Inputs
-* Some wire
+* Some wire, jumper wires
 * Solder station
 * Screwdriver
-* Microscope (recommended)
+* Microscope (optional)
 * Micro usb cable and adapter for keyboard enclosure
 * Some screws for fixing the Arduino
 
@@ -20,9 +20,8 @@ The software can recognize individual or multiple keys on the keyboard
 
 # How-To
 Step 1: Remove plugin of the power supply or batteries inside and open the keyboard case (Note that you will lose the remaining warranty) ![screws](https://github.com/user-attachments/assets/bbcd0ccd-3c16-4224-841f-c1229925b69e)
-Step 2: Carefully remove the black cables by opening the white socket. It's very important to note the direction in which the cables are inserted so that they can be reinserted in the same way at the end (Hint: note the position of the white marked cable)  ![mainboard](https://github.com/user-attachments/assets/5ffe689c-2cd0-464d-83ab-ce3d05781627)
-Step 3: Remove the mainboard
-Step 4: Now the more difficult part: You can solder the cables from backside of the board directly to an pin header on the GPIOs of the arduino or (like the picture) put on the right side of the Board an 19 PIN Header with some glue and solder the cables to that header step by step (From there you will need Jumper Wires to the Arduino Ports). The following picture shows you where you have solder the wires on the Board an in white the target GPIO Pin of the Arduino. Which way you prefer is your choice. ![20220509_124445_verdrahtung_direkt](https://github.com/user-attachments/assets/9adffc1d-a2fc-4815-8e37-f4350df06015) Here you can see the result with jumper wires (but as mentioned before this is optional) ![jumper_wires](https://github.com/user-attachments/assets/0a221dd5-db40-4e67-966b-9aded31f5ab2)
+Step 2: Carefully remove the black cables by opening the white socket. It's very important to note the direction in which the cables are inserted so that they can be reinserted in the same way at the end (Hint: note the position of the white marked cable) and remove the mainboard  ![mainboard](https://github.com/user-attachments/assets/5ffe689c-2cd0-464d-83ab-ce3d05781627)
+Step 4: Now the solder part: You can solder the wires from backside of the board directly to the pins on the GPIOs of the arduino or (like me) ive put on the right side of the board an 19 PIN Header with some glue and solder the wires step by step (afterwards you will need jumper wires to the Arduino ports). The following picture shows you where you have solder the wires on the Board an in white the target GPIO Pin of the Arduino. Which way you prefer is your choice. ![20220509_124445_verdrahtung_direkt](https://github.com/user-attachments/assets/9adffc1d-a2fc-4815-8e37-f4350df06015) Here you can see the result with jumper wires (but as mentioned before this is optional) ![jumper_wires](https://github.com/user-attachments/assets/0a221dd5-db40-4e67-966b-9aded31f5ab2)
 Step 5: Carefully reinsert the black cables from before 
 Step 6: Download the Skretch from release directory and start the arduino ide
 Step 7: Connect the Arduino with USB Cable to PC, install the library "MIDIUSB" from library manager in Arduino IDE and upload the skretch to Arduino 
