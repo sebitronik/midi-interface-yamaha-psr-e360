@@ -40,7 +40,7 @@ Install the USB adapter on the keyboard case for external connection. ![usb_adap
 
 ## Disturbance on Row lines:
 
-The keyboard sends a keystroke signal in rows and columns to the mainboard. This signal is then forwarded to the Arduino, where it determines which key has been pressed. Additionally, the keyboard has an extra switch for each key that is only triggered when the key is pressed further down. This information is used to enable velocity sensitivity (though this information is currently not utilized). Essentially, a simple query is made to forward the information via the MIDI protocol over USB. Unfortunately, there is interference on the signals for the rows that must be filtered out because otherwise, the Arduino cannot clearly identify the key:![filter](https://github.com/user-attachments/assets/7516936b-1a3a-4605-a4fe-ddfbf5e1219d)
+The Yamaha keyboard sends a keystroke signal in rows and columns to the mainboard. This signal is then forwarded to the Arduino, where it determines which key has been pressed. Additionally, the keyboard has an extra switch for each key that is only triggered when the key is pressed further down. This information is used to enable velocity sensitivity (though this information is currently not utilized). Essentially, a simple query is made to forward the information via the MIDI protocol over USB. Unfortunately, there is interference on the signals for the rows that must be filtered out because otherwise, the Arduino cannot clearly identify the key:![filter](https://github.com/user-attachments/assets/7516936b-1a3a-4605-a4fe-ddfbf5e1219d)
 
 Sometimes the yellow row signal has two impulses.
 
