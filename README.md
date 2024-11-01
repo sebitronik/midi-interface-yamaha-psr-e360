@@ -37,11 +37,11 @@ Now carefully reinsert the black cables from before on the mainboard.
 Install a USB adapter on the keyboard case for external connection by drilling a hole in the case.  ![usb_adapter](https://github.com/user-attachments/assets/a71c92b3-18c8-4a13-b470-ad198eb77fa7) Now attach the Arduino to the case using screws, glue, or board holder clips, and reassemble the case. Congrats! You are ready to play!
 ![20241101_173311](https://github.com/user-attachments/assets/759cb362-0797-477e-993d-36c0537a5a3b)
 
-# Technical background information
+# Some additional technical information
 
-## Disturbance on Row lines
+## Disturbance on column wires
 
-The Yamaha keyboard sends a keystroke signal in rows and columns to the mainboard. This signal is then forwarded to the Arduino, where it determines which key has been pressed. Additionally, the keyboard has an extra switch for each key that is only triggered when the key is pressed further down. This information is used to enable velocity sensitivity (though this information is currently not utilized). Essentially, a simple query is made to forward the information via the MIDI protocol over USB. Unfortunately, there is a periodical interference signals for the rows that must be filtered out because otherwise, the Arduino cannot clearly identify the key:
+The Yamaha keyboard sends a keystroke signal in rows and columns to the mainboard. This signal is then forwarded to the Arduino, where it determines which key has been pressed. Additionally, the keyboard has an extra switch for each key that is only triggered when the key is pressed further down. This information is used to enable velocity sensitivity (though this information is currently not utilized). Essentially, a simple query is made to forward the information via the MIDI protocol over USB. Unfortunately, there is a periodical interference signals for the column that must be filtered out because otherwise, the Arduino cannot clearly identify the key:
 ![SDS00011](https://github.com/user-attachments/assets/c70dfc6b-89a7-4fca-be66-c9a8bfde7893)
 If we look closer:
 ![SDS00005](https://github.com/user-attachments/assets/741ad2ed-5dd2-4b7f-a02f-b5df548f7685)
