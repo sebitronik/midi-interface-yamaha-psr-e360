@@ -20,7 +20,7 @@ A simple MIDI interface for the Yamaha PSR E360 keyboard, designed for use with 
 ## Step 1: Preparations
 Disconnect the power supply or batteries and open the keyboard case (note that this will void any remaining warranty). ![screws](https://github.com/user-attachments/assets/bbcd0ccd-3c16-4224-841f-c1229925b69e)
 
-## Step 2: Remove signal board
+## Step 2: Remove the main board
 Carefully remove the black cables by opening the white socket. It’s important to note the direction in which the cables are inserted so they can be reinserted the same way at the end (Hint: note the position of the white-marked cable). Now you can remove the screws and take the mainboard out of the case.  ![mainboard](https://github.com/user-attachments/assets/5ffe689c-2cd0-464d-83ab-ce3d05781627)
 
 ## Step 3: Soldering
