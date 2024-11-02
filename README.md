@@ -13,7 +13,7 @@ A simple MIDI interface for the Yamaha PSR E360 keyboard, designed for use with 
 * Micro USB cable and adapter for keyboard enclosure
 * Some screws to fix the Arduino
 
-## Restrictions:
+## Restrictions
 * No support for touch sensitivity (only whether a key is pressed or not)
 * MIDI-In is not supported, only MIDI-Out
 
