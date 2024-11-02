@@ -17,7 +17,7 @@ A simple MIDI interface for the Yamaha PSR E360 keyboard, designed for use with 
 * MIDI-In is not supported, only MIDI-Out
 
 # Support me
-[It would be cool if you would consider supporting this project](https://www.paypal.me/SebastianDiefenbach)
+[If you like, you can support me via PayPal](https://www.paypal.me/SebastianDiefenbach)
 
 # Instructions
 ## Step 1: Preparations
