@@ -82,7 +82,6 @@ void loop() {
       {
         // Start window to check if only 1 pulse comes
         impulsCounterIsRunning = HIGH;
-        // PORTC = B10000000; // set D13 (PC7) to high WINDOW 1/3
         impulsCounterDetectedImpuls = 1;
         // Store the key status
         pressedAnalogPin = !(analogPinStatus(selectedAnalogPin));
@@ -91,11 +90,10 @@ void loop() {
     // If the pulse counter is running, check for multiple pulses; otherwise, set validImpuls to LOW
     if (impulsCounterIsRunning == HIGH) {
       impulsCounterIsRunningValue++;
-      impulsCounterStatusImpuls = digitalPinStatus(selectedDigitalPin);  // Is D0 (PD2) high?
+      impulsCounterStatusImpuls = digitalPinStatus(selectedDigitalPin);
       if ((impulsCounterDetectedImpuls == 1) && (impulsCounterStatusImpuls == HIGH)) impulsCounterDetectedImpuls = 2;
       if ((impulsCounterDetectedImpuls == 2) && (impulsCounterStatusImpuls == LOW)) impulsCounterDetectedImpuls = 3;
       if ((impulsCounterDetectedImpuls == 3) && (impulsCounterStatusImpuls == HIGH)) {
-        // PORTC = B00000000; // set D13 (PC7) to low // Close minimal window after two pulses WINDOW 2/3
         impulsCounterIsRunning = LOW;
         impulsCounterIsRunningValue = 0;
         validImpuls = LOW;
@@ -105,7 +103,6 @@ void loop() {
     // If no two pulses exist, the pulse counts as valid = validImpuls = HIGH
     if (impulsCounterIsRunningValue > 40)  // a good value as it lies outside the pulses
     {
-      // PORTC = B00000000; // set D13 (PC7) to low // Close maximum window WINDOW 3/3
       // Close window
       impulsCounterIsRunning = LOW;
       impulsCounterIsRunningValue = 0;
