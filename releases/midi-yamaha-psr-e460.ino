@@ -99,7 +99,7 @@ void loop() {
         validImpuls = LOW;
       }
     }
-    // After 70 samples, stop sampling = window checking for two pulses
+    // After 40 samples, stop sampling = window checking for two pulses
     // If no two pulses exist, the pulse counts as valid = validImpuls = HIGH
     if (impulsCounterIsRunningValue > 40)  // a good value as it lies outside the pulses
     {
