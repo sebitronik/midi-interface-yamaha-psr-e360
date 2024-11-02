@@ -18,7 +18,7 @@ A simple MIDI interface for the Yamaha PSR E360 keyboard, designed for use with 
 
 ## Support me
 [If you like, you can support me via PayPal](https://www.paypal.me/SebastianDiefenbach)
-
+[![PayPal](https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png)](https://www.paypal.me/SebastianDiefenbach)
 # Instructions
 ## Step 1: Preparations
 Disconnect the power supply or batteries and open the keyboard case (note that this will void any remaining warranty). ![screws](https://github.com/user-attachments/assets/bbcd0ccd-3c16-4224-841f-c1229925b69e)
