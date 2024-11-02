@@ -1,7 +1,7 @@
 # Usb Midi Interface for Yamaha PSR E360 with Arduino Leonardo
 ![title](https://github.com/user-attachments/assets/fb22b044-fd96-406b-8c8d-1585e3c415f6)
 
-A simple MIDI interface for the Yamaha PSR E360 keyboard, designed for use with music learning software on a tablet or PC (e.g., "Simply Piano"). The software can recognize individual and multiple keys on the keyboard accurately and without delay.
+A simple MIDI interface for the Yamaha PSR E360 keyboard, specifically designed to work seamlessly with music learning software on a tablet or PC, such as "Simply Piano." This interface allows the software to recognize individual notes and chords accurately, ensuring that both single and multiple key presses are detected without delay. By transmitting keystroke information via USB, the MIDI interface maintains a stable and responsive connection, providing an enjoyable and efficient learning experience for users. This setup enables real-time feedback, which is essential for building accurate timing and musical skills as learners progress.
 
 ## Requirements
 * Yamaha PSR E360 Keyboard
@@ -47,7 +47,7 @@ Install a USB adapter on the keyboard case for external connection by drilling a
 
 ## Disturbance on column wires
 
-The Yamaha keyboard sends a keystroke signal in rows and columns to the mainboard. This signal is then forwarded to the Arduino, where it determines which key has been pressed. Additionally, the keyboard has an extra switch for each key that is only triggered when the key is pressed further down. This information is used to enable velocity sensitivity (though this information is currently not utilized). Essentially, a simple query is made to forward the information via the MIDI protocol over USB. Unfortunately, there is a periodical interference signals for the column that must be filtered out because otherwise, the Arduino cannot clearly identify the key:
+The Yamaha keyboard sends a keystroke signal in rows and columns to the mainboard. This signal is then forwarded to the Arduino, where it identifies which key has been pressed. Additionally, each key on the keyboard has an extra switch that is only triggered when the key is pressed further down, enabling velocity sensitivity (though this information is currently not utilized). Essentially, a simple query is performed to transmit the information via the MIDI protocol over USB. Unfortunately, there is periodic interference in the signal for one column that must be filtered out, otherwise the Arduino cannot reliably identify the key.
 ![SDS00011](https://github.com/user-attachments/assets/e0bc930c-3cb3-440b-b18b-5654e4cde0dd)
 
 Here, we notice some peaks in the magenta signal (only in columns not in rows). If we looking closer, we occasionally see two impulses that are unnecessary, therefore making the filter in the code essential.
