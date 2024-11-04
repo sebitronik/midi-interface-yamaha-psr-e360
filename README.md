@@ -1,4 +1,4 @@
-# Usb Midi Interface for Yamaha PSR E360 with Arduino Leonardo
+# Usb Midi Interface for Yamaha PSR E360 Keyboard with Arduino Leonardo
 ![title](https://github.com/user-attachments/assets/fb22b044-fd96-406b-8c8d-1585e3c415f6)
 
 A simple MIDI interface for the Yamaha PSR E360 keyboard, specifically designed to work seamlessly with music learning software on a tablet or PC, such as "Simply Piano." This interface allows the software to recognize individual notes and chords accurately, ensuring that both single and multiple key presses are detected without delay. By transmitting keystroke information via USB, the MIDI interface maintains a stable and responsive connection, providing an enjoyable and efficient learning experience for users. This setup enables real-time feedback, which is essential for building accurate timing and musical skills as learners progress.
